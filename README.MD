@@ -118,6 +118,32 @@ http://localhost:4200
 
 ---
 
+## Assumptions and Design Decisions
+
+- A monolithic architecture was chosen to keep the solution simple and easy to understand.
+- An H2 in-memory database is used to avoid additional setup complexity.
+- Authentication and authorization are not implemented, as they were not part of the requirements.
+- Angular standalone components are used to reduce boilerplate and keep the frontend modular.
+- UI styling is intentionally minimal to focus on functionality.
+
+---
+
+## Trade-offs and Future Improvements
+
+Trade-offs:
+- Data is not persisted between restarts due to the in-memory database.
+- Pagination and sorting are not implemented.
+- UI design is basic and not based on a design system.
+
+Future Improvements:
+- Replace H2 with PostgreSQL or MySQL.
+- Add pagination and sorting.
+- Add authentication and authorization.
+- Improve UI using a component library.
+- Deploy to a cloud environment (AWS or Azure).
+
+---
+
 ## Docker (Backend)
 
 ### Build Docker Image
@@ -178,13 +204,21 @@ mvn test
 
 ---
 
-## Submission Checklist
+## AI Tools Usage Disclosure
 
-- [x] Public Git repository
-- [x] Dockerfile included
-- [x] CI/CD pipeline concept included
-- [x] Architecture description provided
-- [x] README documentation completed
+AI tools were used for syntax assistance, debugging support, and initial scaffolding ideas.
+All architectural decisions, trade-offs, and final implementations were reviewed and completed manually by the author.
 
+---
+## Commit History
+
+The repository follows an incremental commit history demonstrating development progress:
+- Project initialization
+- Backend CRUD implementation
+- Unit testing
+- Frontend views and forms
+- UI responsiveness improvements
+- DevOps configuration
+- Documentation
 ---
 

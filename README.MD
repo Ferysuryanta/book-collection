@@ -76,8 +76,8 @@ book-collection/
 ### Backend
 
 ```bash
-cd book-collection-backend
-mvn spring-boot:run
+cd book-collection
+mvn clean spring-boot:run
 ```
 
 Backend will run at:
@@ -96,6 +96,7 @@ http://localhost:8080/h2-console
 
 ```bash
 cd book-collection-frontend
+npm install
 ng serve
 ```
 

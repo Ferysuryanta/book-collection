@@ -1,0 +1,14 @@
+<h2>{{ isEdit ? 'Edit Book' : 'Add Book' }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input formControlName="title" placeholder="Title" />
+  <input formControlName="author" placeholder="Author" />
+  <input formControlName="isbn" placeholder="ISBN" />
+  <input formControlName="publicationYear" placeholder="Year" />
+  <input formControlName="genre" placeholder="Genre" />
+  <textarea formControlName="description" placeholder="description"></textarea>
+
+  <button type="submit" [disabled]="form.invalid">
+    {{ isEdit ? 'Update' : 'Save' }}
+  </button>
+</form>

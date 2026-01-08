@@ -1,0 +1,29 @@
+<h2>Book List</h2>
+
+<form [formGroup]="searchForm">
+  <input
+    type="text"
+    formControlName="search"
+    placeholder="Search by title or author"
+  />
+</form>
+
+<button (click)="add()">Add Book</button>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>ISBN</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.isbn }}</td>
+    <td>
+      <button (click)="edit(book.id)">Edit</button>
+      <button (click)="delete(book.id)">Delete</button>
+    </td>
+  </tr>
+</table>

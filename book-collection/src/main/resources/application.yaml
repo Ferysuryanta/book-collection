@@ -1,3 +1,15 @@
 spring:
-  application:
-    name: book-collection
+  datasource:
+    url: jdbc:h2:mem:booksdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
